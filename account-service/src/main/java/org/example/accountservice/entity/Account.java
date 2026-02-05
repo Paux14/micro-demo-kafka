@@ -19,6 +19,18 @@ public class Account {
     private String email;
     private Integer solde;
 
+    /**
+     * Nombre total de cartes associées à ce compte,
+     * mis à jour en temps réel via Kafka.
+     */
+    private Integer totalCards = 0;
+
+    /**
+     * Nombre total de prêts associés à ce compte,
+     * mis à jour en temps réel via Kafka.
+     */
+    private Integer totalLoans = 0;
+
     public Long getId() {
         return id;
     }
@@ -50,4 +62,21 @@ public class Account {
     public void setSolde(Integer solde) {
         this.solde = solde;
     }
+
+    public Integer getTotalCards() {
+        return totalCards;
+    }
+
+    public void setTotalCards(Integer totalCards) {
+        this.totalCards = totalCards;
+    }
+
+    public Integer getTotalLoans() {
+        return totalLoans;
+    }
+
+    public void setTotalLoans(Integer totalLoans) {
+        this.totalLoans = totalLoans;
+    }
 }
+

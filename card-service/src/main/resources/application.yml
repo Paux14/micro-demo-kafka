@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: card-service
+  kafka:
+    topic:
+      account: account-events
+
